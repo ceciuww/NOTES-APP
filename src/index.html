@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story App - Dicoding</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF69B4">
+    
+    <!-- iOS Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Story App">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header>
+        <nav>
+            <div class="logo floating">
+                <i class="fas fa-book-open"></i>
+                <span>Story App</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-nav>Home</a>
+                <a href="#add-story" class="nav-link" data-nav>Add Story</a>
+                <a href="#map-view" class="nav-link" data-nav>Map</a>
+                <a href="#login" class="nav-link" id="auth-link" data-nav>Login</a>
+                <!-- PERBAIKAN: Gunakan button dengan event listener yang proper -->
+                <button id="notification-btn" class="nav-link notification-btn" style="background: none; border: none; color: inherit; cursor: pointer;">
+                    <i class="fas fa-bell"></i>
+                    <span>Enable Notifications</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <div id="view-container">
+            <!-- Views will be rendered by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Story App - Dicoding Submission</p>
+    </footer>
+
+    <div class="loading-overlay" id="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="sw.js"></script>
+</body>
+</html>

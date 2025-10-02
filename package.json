@@ -1,0 +1,42 @@
+{
+  "name": "story-app-pwa",
+  "version": "2.0.0",
+  "description": "Progressive Web App for sharing stories with offline support and push notifications",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
+    "start": "webpack serve --config webpack.dev.js --open",
+    "deploy": "npm run build && echo 'Deploy to your hosting service'",
+    "serve": "http-server dist"
+  },
+  "keywords": [
+    "pwa",
+    "story",
+    "offline",
+    "notifications",
+    "dicoding",
+    "progressive-web-app"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.8.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0",
+    "webpack-merge": "^5.9.0",
+    "workbox-webpack-plugin": "^6.6.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "regenerator-runtime": "^0.13.11",
+    "idb": "^7.1.1"
+  }
+}

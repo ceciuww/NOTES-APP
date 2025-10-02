@@ -1,0 +1,3 @@
+Nama: [Your Name]
+Email: [your.email@example.com]
+URL: http://web.notes-app.com/
